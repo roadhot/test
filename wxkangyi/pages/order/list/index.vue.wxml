@@ -1,0 +1,42 @@
+<template name="0b0df9bf">
+  <view class="_div data-v-0214d22a app">
+    <view class="_div data-v-0214d22a tab">
+      <view class="_div data-v-0214d22a item {{[tab_active == 'all' ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_0'}}" data-comkey="{{$k}}">全部</view>
+      <view class="_div data-v-0214d22a item {{[tab_active == 0 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_1'}}" data-comkey="{{$k}}">待付款</view>
+      <view class="_div data-v-0214d22a item {{[tab_active == 1 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_2'}}" data-comkey="{{$k}}">待发货</view>
+      <view class="_div data-v-0214d22a item {{[tab_active == 2 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_3'}}" data-comkey="{{$k}}">待收货</view>
+      <view class="_div data-v-0214d22a item {{[tab_active == 3 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_4'}}" data-comkey="{{$k}}">已完成</view>
+    </view>
+    <view class="_div data-v-0214d22a void"></view>
+    <view class="_div data-v-0214d22a list">
+      <view class="_div data-v-0214d22a item" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-0214d22a top">
+          <view class="_div data-v-0214d22a orderno">订单编号：{{item.orderno}}</view>
+          <view class="_div data-v-0214d22a status" wx:if="{{item.status == 0}}">待付款</view>
+          <view class="_div data-v-0214d22a status" wx:if="{{item.status == 1}}">待发货</view>
+          <view class="_div data-v-0214d22a status" wx:if="{{item.status == 2}}">待收货</view>
+          <view class="_div data-v-0214d22a status" wx:if="{{item.status == 3}}">已完成</view>
+        </view>
+        <view class="_div data-v-0214d22a info">
+          <view class="_div data-v-0214d22a idv" wx:key="v" key="{{v}}" wx:for="{{item.goods_list}}" wx:for-index="v" wx:for-item="i">
+            <image class="_img data-v-0214d22a pic" src="{{resurl+i.pic}}" alt></image>
+            <view class="_div data-v-0214d22a left">
+              <view class="_div data-v-0214d22a name"><label class="_span data-v-0214d22a">{{i.name}}</label></view>
+              <view class="_div data-v-0214d22a price_num"><label class="_span data-v-0214d22a price_">￥<label class="_span data-v-0214d22a">{{i.price}}</label></label><label class="_span data-v-0214d22a num">x<label class="_span data-v-0214d22a">{{i.buynumber}}</label></label></view>
+              <view class="_div data-v-0214d22a btu" wx:if="{{item.status == 3}}" bindtap="handleProxy" data-eventid="{{'6_5_'+index+'-'+v}}" data-comkey="{{$k}}">评价</view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-0214d22a datetime_price">
+          <view class="_div data-v-0214d22a datetime">下单时间：{{item.datetime}}</view>
+          <view class="_div data-v-0214d22a totalprice">订单总和：{{item.totalprice}}</view>
+        </view>
+        <view class="_div data-v-0214d22a bottom">
+          <view class="_div data-v-0214d22a btu" wx:if="{{item.status == 0}}" bindtap="handleProxy" data-eventid="{{'4_6_'+index}}" data-comkey="{{$k}}">立即付款</view>
+          <view class="_div data-v-0214d22a btu color" wx:if="{{item.status == 1}}" bindtap="handleProxy" data-eventid="{{'4_7_'+index}}" data-comkey="{{$k}}">申请退款</view>
+          <view class="_div data-v-0214d22a btu" wx:if="{{item.status == 2}}" bindtap="handleProxy" data-eventid="{{'4_8_'+index}}" data-comkey="{{$k}}">查看物流</view>
+          <view class="_div data-v-0214d22a btu" wx:if="{{item.status == 2}}" bindtap="handleProxy" data-eventid="{{'4_9_'+index}}" data-comkey="{{$k}}">完成订单</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-0214d22a reasondv {{[cancelreason == true ? 'reasonactive' : '']}}" wx:if="{{cancelreason}}"><textarea name id cols="30" rows="10" placeholder="请填写退款原因" value="{{message}}" bindinput="handleProxy" data-eventid="{{'2_10'}}" data-comkey="{{$k}}" class="_textarea data-v-0214d22a" /> <button class="_button data-v-0214d22a confirmcancel" bindtap="handleProxy" data-eventid="{{'2_11'}}" data-comkey="{{$k}}">确定</button> <button class="_button data-v-0214d22a canceltuikuan" bindtap="handleProxy" data-eventid="{{'2_12'}}" data-comkey="{{$k}}">我再想想</button></view></view></template>

@@ -1,0 +1,27 @@
+<import src="/pages/shop/order/index.vue.wxml" /><template is="054f6a75" data="{{ ...$root['0'], $root }}"/>
+
+    <view class="total" wx:if="{{show}}">
+      <view class="bg"></view>
+      <view class="say">
+        <form bindsubmit="comment">
+          <view class="pink">
+            <image bindtap="block" src="/static/images/comment/back.png"></image>
+            <text>评价</text> 
+          </view>
+          <view class="goods_pic">
+            <image src="{{goods.pic}}"></image>
+            <view class="five">
+              <image bindtap="goo" data-num="1" src="{{good>0?sub:sup}}"></image>
+              <image bindtap="goo" data-num="2" src="{{good>1?sub:sup}}"></image>
+              <image bindtap="goo" data-num="3" src="{{good>2?sub:sup}}"></image>
+              <image bindtap="goo" data-num="4" src="{{good>3?sub:sup}}"></image>
+              <image bindtap="goo" data-num="5" src="{{good>4?sub:sup}}"></image>
+            </view>
+          </view>
+          <textarea name="content" placeholder="分享您的满意"></textarea>
+          <view class="res">
+            <button form-type="submit" class="yes">提交</button> 
+          </view>
+        </form>
+      </view>
+    </view>

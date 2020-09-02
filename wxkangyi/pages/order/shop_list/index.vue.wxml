@@ -1,0 +1,42 @@
+<template name="43e9b248">
+  <view class="_div data-v-7672e530 app">
+    <view class="_div data-v-7672e530 tab">
+      <view class="_div data-v-7672e530 item {{[tab_active == 'all' ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_0'}}" data-comkey="{{$k}}">全部</view>
+      <view class="_div data-v-7672e530 item {{[tab_active == 0 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_1'}}" data-comkey="{{$k}}">待付款</view>
+      <view class="_div data-v-7672e530 item {{[tab_active == 1 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_2'}}" data-comkey="{{$k}}">待发货</view>
+      <view class="_div data-v-7672e530 item {{[tab_active == 2 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_3'}}" data-comkey="{{$k}}">待收货</view>
+      <view class="_div data-v-7672e530 item {{[tab_active == 3 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_4'}}" data-comkey="{{$k}}">已完成</view>
+      <view class="_div data-v-7672e530 item {{[tab_active == 5 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_5'}}" data-comkey="{{$k}}">退款</view>
+    </view>
+    <view class="_div data-v-7672e530 void"></view>
+    <view class="_div data-v-7672e530 list">
+      <view class="_div data-v-7672e530 item" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-7672e530 top">
+          <view class="_div data-v-7672e530 orderno">订单编号：{{item.orderno}}</view>
+          <view class="_div data-v-7672e530 status" wx:if="{{item.status == 0}}">待付款</view>
+          <view class="_div data-v-7672e530 status" wx:if="{{item.status == 1}}">待发货</view>
+          <view class="_div data-v-7672e530 status" wx:if="{{item.status == 2}}">待收货</view>
+          <view class="_div data-v-7672e530 status" wx:if="{{item.status == 5}}">退款</view>
+        </view>
+        <view class="_div data-v-7672e530 info">
+          <image class="_img data-v-7672e530 pic" src="{{resurl+item.pic}}" alt></image>
+          <view class="_div data-v-7672e530 left">
+            <view class="_div data-v-7672e530 name">{{item.name}}</view>
+            <view class="_div data-v-7672e530 price_num"><label class="_span data-v-7672e530 price_">￥{{item.price}}</label> <label class="_span data-v-7672e530 num">x{{item.number}}</label></view>
+            <view class="_div data-v-7672e530 price">总价：<label class="_span data-v-7672e530">￥{{(item.price - 0) * (item.number - 0)}}</label></view>
+          </view>
+        </view>
+        <view class="_div data-v-7672e530 top">
+          <view class="_div data-v-7672e530 orderno">下单时间：{{item.datetime}}</view>
+        </view>
+        <view class="_div data-v-7672e530 bottom">
+          <view class="_div data-v-7672e530 btu" wx:if="{{item.status == 0}}">付款</view>
+          <view class="_div data-v-7672e530 btu color" wx:if="{{item.status == 0}}" bindtap="handleProxy" data-eventid="{{'4_6_'+index}}" data-comkey="{{$k}}">取消订单</view>
+          <view class="_div data-v-7672e530 btu" wx:if="{{item.status == 2 || item.status == 3}}" bindtap="handleProxy" data-eventid="{{'4_7_'+index}}" data-comkey="{{$k}}">查看物流</view>
+          <view class="_div data-v-7672e530 btu" wx:if="{{item.status == 2}}" bindtap="handleProxy" data-eventid="{{'4_8_'+index}}" data-comkey="{{$k}}">完成订单</view>
+          <view class="_div data-v-7672e530 btu color" wx:if="{{item.status == 5}}">已退款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

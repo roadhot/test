@@ -1,0 +1,14 @@
+<template name="6ce98066">
+  <view class="_div data-v-52974821 app">
+    <scroll-view class="_scroll-view data-v-52974821 first_list" scroll-y>
+      <view wx:key="index" key="{{index}}" class="_div data-v-52974821 item {{item.id == current_id ? 'activate' : ''}}" bindtap="handleProxy" data-eventid="{{'2_0_'+index}}" data-comkey="{{$k}}" wx:for="{{first_list}}" wx:for-index="index" wx:for-item="item">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <scroll-view class="_scroll-view data-v-52974821 second_list" scroll-y>
+      <navigator class="_a data-v-52974821 cate" wx:key="index" key="{{index}}" url="{{'/pages/normal/list/main?cate_id='+item.id}}" wx:for="{{second_list}}" wx:for-index="index" wx:for-item="item">
+        <image class="_img data-v-52974821 image" src="{{resurl+item.pic+'?x-oss-process=image/resize,m_fill,w_240,h_240'}}" mode="aspectFill"></image> <text class="_text data-v-52974821">{{item.name}}</text>
+      </navigator>
+    </scroll-view>
+  </view>
+</template>

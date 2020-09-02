@@ -1,0 +1,55 @@
+<template name="d3b97a2e">
+  <view class="_div data-v-0c4e863d app">
+    <view class="_div data-v-0c4e863d header area">
+      <view class="_div data-v-0c4e863d user">
+        <view class="_div data-v-0c4e863d info">
+          <image src="{{user&&user.avatar?user.avatar:'/static/images/icon/avatar_default.png'}}" alt class="_img data-v-0c4e863d thumb_pic"></image>
+          <view class="_div data-v-0c4e863d nickname"> 昵称：{{user&&user.nickname?user.nickname:'点击登录'}}
+          </view>
+          <view class="_div data-v-0c4e863d jifen"> 积分：{{user&&user.integral?user.integral:'0'}}
+          </view>
+        </view>
+      </view>
+    </view>
+        <view class="_div data-v-0c4e863d order_box">
+      <view class="_div data-v-0c4e863d top">
+        <image class="_img data-v-0c4e863d top_icon" src="/static/images/icon_5.png" alt></image>
+        <view class="_div data-v-0c4e863d top_text">钱包</view>
+        <text>￥{{bal}}</text>
+      </view>
+      <view class="_div data-v-0c4e863d box_list">
+        <navigator url="/pages/topup/topup" class="_a data-v-0c4e863d item">
+          <image class="_img data-v-0c4e863d item_icon" src="/static/images/icon/chongzhi.png" alt></image>
+          <view class="_div data-v-0c4e863d text">充值</view>
+        </navigator>
+        <navigator url="/pages/refund/refund" class="_a data-v-0c4e863d item">
+          <image class="_img data-v-0c4e863d item_icon" src="/static/images/icon/tixian.png" alt></image>
+          <view class="_div data-v-0c4e863d text">提现</view>
+        </navigator>
+        
+      </view>
+    </view>
+    <view class="_div data-v-0c4e863d order_box">
+      <view class="_div data-v-0c4e863d top">
+        <image class="_img data-v-0c4e863d top_icon" src="/static/images/icon_5.png" alt></image>
+        <view class="_div data-v-0c4e863d top_text">设备订单</view>
+      </view>
+      <view class="_div data-v-0c4e863d box_list">
+        <navigator url="{{'/pages/driver/order/main?status=1'}}" class="_a data-v-0c4e863d item">
+          <image class="_img data-v-0c4e863d item_icon" src="/static/images/icon_0.png" alt></image>
+          <view class="_div data-v-0c4e863d text">正在租赁</view>
+        </navigator>
+        <navigator url="{{'/pages/driver/order/main?status=2'}}" class="_a data-v-0c4e863d item">
+          <image class="_img data-v-0c4e863d item_icon" src="/static/images/icon_3.png" alt></image>
+          <view class="_div data-v-0c4e863d text">已经完成</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="_div data-v-0c4e863d op-list">
+      <navigator url="/pages/shop/order/main?status=0" class="_a data-v-0c4e863d">商城订单</navigator>
+      <navigator url="/pages/user/edit/main" class="_a data-v-0c4e863d">完善信息</navigator> 
+      <!-- <button  class="_button data-v-0c4e863d item" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">完善信息</button> -->
+      <button class="_button data-v-0c4e863d item" open-type="contact">在线客服</button> <button class="_button data-v-0c4e863d item" open-type="feedback">意见反馈</button> <button class="_button data-v-0c4e863d item"  bindtap="phone">联系电话</button>
+    </view>
+  </view> 
+</template>

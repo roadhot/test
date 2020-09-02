@@ -1,0 +1,49 @@
+<template name="054f6a75">
+  <view class="_div data-v-0d91f0be app">
+    <view class="_div data-v-0d91f0be tab">
+      <view class="_div data-v-0d91f0be item {{[tab_active == 0 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_0'}}" data-comkey="{{$k}}">待付款</view>
+      <view class="_div data-v-0d91f0be item {{[tab_active == 1 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_1'}}" data-comkey="{{$k}}">待发货</view>
+      <view class="_div data-v-0d91f0be item {{[tab_active == 2 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_2'}}" data-comkey="{{$k}}">待收货</view>
+      <view class="_div data-v-0d91f0be item {{[tab_active == 3 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_3'}}" data-comkey="{{$k}}">已完成</view>
+      <view class="_div data-v-0d91f0be item {{[tab_active == 5 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_4'}}" data-comkey="{{$k}}">待退款</view>
+    </view>
+    <view class="_div data-v-0d91f0be void"></view>
+    <view class="_div data-v-0d91f0be list">
+      <view class="_div data-v-0d91f0be item" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-0d91f0be top">
+          <view class="_div data-v-0d91f0be orderno">订单编号：{{item.orderno}}</view>
+          <view class="_div data-v-0d91f0be status" wx:if="{{item.status == 0}}">待付款</view>
+          <view class="_div data-v-0d91f0be status" wx:if="{{item.status == 1}}">待发货</view>
+          <view class="_div data-v-0d91f0be status" wx:if="{{item.status == 2}}">待收货</view>
+          <view class="_div data-v-0d91f0be status" wx:if="{{item.status == 3}}">已完成</view>
+          <view class="_div data-v-0d91f0be status" wx:if="{{item.status == 4}}">待退款</view>
+        </view>
+        <view class="_div data-v-0d91f0be info">
+          <view class="_div data-v-0d91f0be idv" wx:key="v" key="{{v}}" wx:for="{{item.goods_list}}" wx:for-index="v" wx:for-item="i">
+            <image class="_img data-v-0d91f0be pic" src="{{resurl+i.pic}}" alt></image>
+            <view class="_div data-v-0d91f0be left">
+              <view class="_div data-v-0d91f0be name"><label class="_span data-v-0d91f0be">{{i.name}}</label></view>
+              <view class="_div data-v-0d91f0be price_num"><label class="_span data-v-0d91f0be price_">￥<label class="_span data-v-0d91f0be">{{i.price}}</label></label><label class="_span data-v-0d91f0be num">x<label class="_span data-v-0d91f0be">{{i.buynumber}}</label></label></view>
+              <view class="_div data-v-0d91f0be btu" wx:if="{{item.status == 3 && i.comment == 0}}" bindtap="block" data-orderno="{{item.orderno}}" data-goods_id="{{i.goods_id}}">去评价 </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-0d91f0be datetime_price">
+          <view class="_div data-v-0d91f0be datetime">下单时间：{{item.datetime}}</view>
+          <view class="_div data-v-0d91f0be totalprice">订单总和：{{item.totalprice}}</view>
+        </view>
+        <view class="_div data-v-0d91f0be datetime_price">
+          <view class="_div data-v-0d91f0be totalprice" wx:if="{{item.exp_no}}">快递名称：{{item.exp_no}}</view>
+          <view class="_div data-v-0d91f0be totalprice" wx:if="{{item.exp_order}}">快递单号：{{item.exp_order}}</view>
+        </view>
+        <view class="_div data-v-0d91f0be bottom">
+          <view class="_div data-v-0d91f0be btu" wx:if="{{item.status == 0}}" bindtap="handleProxy" data-eventid="{{'4_5_'+index}}" data-comkey="{{$k}}">立即付款</view>
+          <view class="_div data-v-0d91f0be btu" wx:if="{{item.status == 0}}" bindtap="handleCan" data-can="{{item.orderno}}" data-eventid="{{'4_5_'+index}}" data-comkey="{{$k}}">取消订单</view>
+          <view class="_div data-v-0d91f0be btu color" wx:if="{{item.status == 1||item.status == 2}}" bindtap="handleProxy" data-eventid="{{'4_6_'+index}}" data-comkey="{{$k}}">申请退款</view>
+          <view class="_div data-v-0d91f0be btu" wx:if="{{item.status == 2}}" bindtap="handleProxy" data-eventid="{{'4_7_'+index}}" data-comkey="{{$k}}">确认收货</view>
+        </view>
+      </view>
+    </view>
+
+ 
+    <view class="_div data-v-0d91f0be reasondv {{[cancelreason == true ? 'reasonactive' : '']}}" wx:if="{{cancelreason}}"><textarea name id cols="30" rows="10" placeholder="请填写退款原因" value="{{message}}" bindinput="handleProxy" data-eventid="{{'2_8'}}" data-comkey="{{$k}}" class="_textarea data-v-0d91f0be" /> <button class="_button data-v-0d91f0be confirmcancel" bindtap="handleProxy" data-eventid="{{'2_9'}}" data-comkey="{{$k}}">确定</button> <button class="_button data-v-0d91f0be canceltuikuan" bindtap="handleProxy" data-eventid="{{'2_10'}}" data-comkey="{{$k}}">我再想想</button></view></view></template>

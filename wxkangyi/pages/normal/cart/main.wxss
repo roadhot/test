@@ -1,0 +1,147 @@
+
+page {
+  background-color: white;
+}
+.wrap {
+  width: 100%;
+  height: 600rpx;
+}
+.wrap .pic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrap .pic ._img {
+  width: 100%;
+  height: 100%;
+}
+.wrap .btn {
+  width: 100%;
+  height: 200rpx;
+  text-align: center;
+  background: #fff;
+}
+.wrap .btn text {
+  display: block;
+  padding-top: 40rpx;
+}
+.wrap .btn ._a {
+  width: 400rpx;
+  height: 60rpx;
+  background: #495cbe;
+  line-height: 60rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  margin: 40rpx auto;
+}
+.buylist .goods {
+  position: relative;
+  display: block;
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+  height: 220rpx;
+  border-bottom: 2rpx solid #EEE;
+  margin-bottom: 20rpx;
+  background-color: white;
+}
+.buylist .goods .info {
+  position: absolute;
+  top: 20rpx;
+  left: 40rpx;
+  right: 0;
+  height: 160rpx;
+  font-size: 28rpx;
+}
+.buylist .goods .info .pic {
+  position: absolute;
+  left: 6rpx;
+  top: 0;
+  width: 160rpx;
+  height: 160rpx;
+}
+.buylist .goods .info .pic ._img {
+  width: 100%;
+  height: 100%;
+}
+.buylist .goods .info .name {
+  position: absolute;
+  left: 180rpx;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #333;
+}
+.buylist .goods .info .price {
+  position: absolute;
+  right: 28rpx;
+  top: 0;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #495cbe;
+  font-size: 28rpx;
+}
+.buylist .goods .info .numberop {
+  position: absolute;
+  left: 180rpx;
+  bottom: 0;
+  width: 140rpx;
+  height: 46rpx;
+  border-radius: 4rpx;
+  border: 2rpx solid #ccc;
+  display: flex;
+}
+.buylist .goods .info .numberop .changenumber {
+  position: relative;
+  width: 46rpx;
+  height: 46rpx;
+  flex: 1;
+  text-align: center;
+  line-height: 46rpx;
+}
+.buylist .goods .info .numberop .changenumber text {
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  border-left: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 46rpx;
+}
+.buylist .goods .info .del {
+  position: absolute;
+  right: 26rpx;
+  bottom: 4rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.bottom {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  background-color: #FFF;
+  border-top: 2rpx solid #eee;
+}
+.bottom .totalprice {
+  position: absolute;
+  left: 20rpx;
+  height: 100rpx;
+  width: 200rpx;
+  line-height: 100rpx;
+  color: #495cbe;
+  font-size: 32rpx;
+}
+.bottom .button {
+  position: absolute;
+  right: 0;
+  width: 240rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #495cbe;
+  color: #FFF;
+  text-align: center;
+  font-size: 34rpx;
+}

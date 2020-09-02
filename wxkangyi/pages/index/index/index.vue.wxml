@@ -1,0 +1,13 @@
+<template name="33e4ac2b">
+  <view class="_div data-v-861e9702 app">
+    <image src='{{top_img}}' alt class="_img data-v-861e9702 top-img"></image>
+    <view  class="_div data-v-861e9702 smks"><view bindtap="top_tap" bindtap="isset" class="_button2" hover-class="button_hocolor"><button touchstart='{{button_color}}' bindtap="handleProxy" data-eventid="{{'2_1'}}" data-comkey="{{$k}}" class="_button data-v-861e9702">扫码开锁</button></view></view>
+    <view   class="_div data-v-861e9702 info">
+      <view  class="_div data-v-861e9702 text" style='width:500rpx;'>
+        <view class="_p data-v-861e9702"style=''>
+        服务指南：<rich-text nodes="{{rule}}"  class="_div data-v-861e9702"></rich-text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

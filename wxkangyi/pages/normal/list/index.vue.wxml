@@ -1,0 +1,26 @@
+<template name="3fb74348">
+  <view class="_div data-v-693066b0 app">
+    <view class="_div data-v-693066b0 top">
+      <view id="oplist" class="_div data-v-693066b0">
+        <view class="_div data-v-693066b0 op {{sort == 0 ? 'activate' : ''}}" id="sort_0" bindtap="handleProxy" data-eventid="{{'3_0'}}" data-comkey="{{$k}}">综合</view>
+        <view class="_div data-v-693066b0 op {{sort == 1 ? 'activate' : ''}}" id="sort_1" bindtap="handleProxy" data-eventid="{{'3_1'}}" data-comkey="{{$k}}">销量</view>
+        <view class="_div data-v-693066b0 op {{sort == 2 ? 'activate' : ''}}" id="sort_2" bindtap="handleProxy" data-eventid="{{'3_2'}}" data-comkey="{{$k}}">价格</view>
+      </view>
+    </view>
+    <view style="height: 40px" class="_div data-v-693066b0"></view>
+    <view id="list" class="_div data-v-693066b0 area">
+      <view wx:key="index" key="{{index}}" class="_div data-v-693066b0 goods_item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <navigator class="_a data-v-693066b0 goods" url="{{'/pages/normal/detail/main?id='+item.id}}">
+          <view class="_div data-v-693066b0 pic">
+            <image src="{{resurl+item.pic+'?x-oss-process=image/resize,m_fill,w_240,h_240'}}" class="_img data-v-693066b0"></image>
+          </view>
+          <view class="_div data-v-693066b0 info">
+            <view class="_div data-v-693066b0 name">{{item.name}}</view>
+            <view class="_div data-v-693066b0 price">￥{{item.price}}</view>
+            <view class="_div data-v-693066b0 sales">销量:{{item.sales}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</template>

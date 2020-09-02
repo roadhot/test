@@ -1,0 +1,133 @@
+
+.top {
+  position: relative;
+  height: 128rpx;
+  background: #495cbe;
+  overflow: hidden;
+}
+.top .title {
+  position: relative;
+  margin-top: 40rpx;
+  width: 100%;
+  height: 88rpx;
+  color: #FFF;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+.top .back {
+  position: absolute;
+  display: block;
+  width:100%;
+  height: 380rpx;
+  top: 54rpx;
+  left: 20rpx;
+  z-index: 999;
+}
+page {
+  background: #FFF;
+}
+.driver_name {
+  font-size: 50rpx;
+  position: relative;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #495cbe;
+}
+.btnlist {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: 20rpx;
+}
+.btnlist .btn {
+  width: 250rpx;
+  overflow: hidden;
+  height: 400rpx;
+}
+.btnlist .btn ._img {
+  display: block;
+  width: 250rpx;
+  height: 330rpx;
+  margin: auto;
+}
+.sm {
+  position: relative;
+  width: 640rpx;
+  margin: auto;
+  color: #999;
+  display: block;
+  font-size: 40rpx;
+  top: 90rpx;
+  left: 80rpx;
+}
+.return_list {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  display: flex;
+  line-height: 80rpx;
+  height: 80rpx;
+  border-top: 2rpx solid #EEE;
+  width: 100%;
+}
+.return_list ._a {
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+.top-img {
+  width: 100%;
+  height: 370rpx;
+}
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left:100rpx;
+}
+.dd{
+  width: 100%;
+  height: 600rpx;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+}
+.up{
+  position: absolute;
+  z-index: 1;
+  color:#aaa;
+  font-size:60rpx;
+  line-height: 240rpx;
+  /* margin:0px auto; */
+  margin-left:80rpx;
+}
+.info .text {
+  width: 550rpx;
+}
+.info .text ._p {
+  font-size: 30rpx;
+  color: #999;
+}
+.info .text ._div {
+  font-size: 30rpx;
+  color: #999;
+}
+.info .text ._p:first-child {
+  font-weight: 600;
+}
+.showimg{
+  position: absolute;
+  top: 350rpx;
+  background: rgba(194, 194, 194, 0.7);
+  border-radius: 30rpx;
+  width: 300rpx;
+  height: 300rpx;
+  left: 224rpx;
+  z-index: 1;
+}

@@ -1,0 +1,9 @@
+<template name="2aef97b8">
+  <view class="_div data-v-3c3b7d10 app">
+    <view class="_div data-v-3c3b7d10 middle-nav">
+      <view class="_div data-v-3c3b7d10 line"><label class="_label data-v-3c3b7d10">电    话</label> <input type="tel" placeholder="请输入手机号" value="{{info.tel}}" bindinput="handleProxy" data-eventid="{{'3_0'}}" data-comkey="{{$k}}" class="_input data-v-3c3b7d10" /></view>
+      <view class="_div data-v-3c3b7d10 line"><label class="_label data-v-3c3b7d10">姓    名</label> <input type="text" placeholder="请输入姓名" value="{{info.name}}" bindinput="handleProxy" data-eventid="{{'3_1'}}" data-comkey="{{$k}}" class="_input data-v-3c3b7d10" /></view>
+    </view>
+    <view class="_div data-v-3c3b7d10 botton-btn"><button class="_button data-v-3c3b7d10 btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleProxy" data-eventid="{{'2_2'}}" data-comkey="{{$k}}">确定 </button></view>
+  </view>
+</template>

@@ -1,0 +1,83 @@
+<template name="3fe0120e">
+  <view class="_div data-v-5810d7b6 app">
+    <view class="_div data-v-5810d7b6 cate" >
+   <view  class="title">{{name}}</view>
+   <view wx:if='{{goods_list.length!=0}}'>
+                  <view style='width:100%;background:#fff;float:left;margin-bottom:50rpx;border-radius:40rpx;padding:30rpx 0rpx 30rpx 0rpx;'>
+      <view class="_div data-v-5810d7b6 item" wx:key="index" key="{{index}}" data-eventid="{{'2_1_'+index}}" data-comkey="{{$k}}" >
+        <!-- wx:for="{{cate_list}}" wx:for-index="index" wx:for-item="item"  -->
+        <!-- <view class="_div data-v-5810d7b6 cate_name">{{item.name}}</view> -->
+            <view class="_div data-v-5810d7b6 cricle">
+              <view>
+        <view data-url="{{'/pages/normal/detail/main?id='+goods.id}}" wx:key="goods_index" key="{{goods_index}}"  wx:for="{{goods_list}}" wx:for-index="index" wx:for-item="goods" bindtap="detail_t" data-id="{{goods.id}}">
+        <view >
+        <!-- wx:if="{{goods.cate_id==item.id}}" -->
+          <view class="_div data-v-5810d7b6 goods_info_box"style="float:left;width:50%;">
+            <view  class=" data-v-5810d7b6" style='width:50%;float:left;'>
+              <view class=" data-v-5810d7b6 goods_pic" style='width:290rpx;height:290rpx;' >
+                <image src="{{resurl+goods.pic}}" alt style="width:100%;height:100%;margin-left:30rpx;" class="_img data-v-5810d7b6"></image>
+              </view>
+              <view class="_div data-v-5810d7b6 goods_info_box" style='float:left'>
+                <view style='width: 100%;height: 48rpx;overflow:hidden;display: flex;justify-content: center; margin-left:30rpx;' class="_div  data-v-5810d7b6 goods_title">{{goods.name}}</view>
+                <view class="_div data-v-5810d7b6 goods_price" style='float:left;margin-left:10rpx;font-size:30rpx;'>￥ {{goods.price}}</view>
+                <view class="_div data-v-5810d7b6 goods_sales" style='float:right;margin-left:10rpx;font-size:30rpx;'>销量{{goods.sales}}</view>
+              </view>
+            </view>
+          </view>
+          </view>
+                </view>
+ </view>
+            </view> 
+          
+      <!-- <view  class="_div data-v-5810d7b6 goods_list" >
+      <navigator  url="{{'/pages/normal/detail/main?id='+goods.id}}" wx:key="goods_index" key="{{goods_index}}" class="_a data-v-5810d7b6 item goods_box" wx:for="{{goods_list}}" wx:for-index="index" wx:for-item="goods">
+        <view style class=" data-v-5810d7b6" style='width:30%;float:left;'>
+          <view class=" data-v-5810d7b6 goods_pic">
+            <image src="{{resurl+goods.pic}}" alt class="_img data-v-5810d7b6"></image>
+          </view>
+          <view class="_div data-v-5810d7b6 goods_info_box">
+            <view class="_div data-v-5810d7b6 goods_title">{{goods.name}}</view>
+            <view class="_div data-v-5810d7b6 goods_price">￥ {{goods.price}}</view>
+            <view class="_div data-v-5810d7b6 goods_sales">销量{{goods.sales}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view> -->
+
+
+            </view>
+      </view>
+      
+       </view>
+    </view>
+
+    <view wx:if='{{goods_list.length==0}}'>
+                  <view style='width:100%;background:#fff;float:left;margin-bottom:50rpx;border-radius:40rpx;padding:30rpx 0rpx 30rpx 0rpx;'>
+      <view class="_div data-v-5810d7b6 item" wx:key="index" key="{{index}}" data-eventid="{{'2_1_'+index}}" data-comkey="{{$k}}" >
+        <!-- wx:for="{{cate_list}}" wx:for-index="index" wx:for-item="item"  -->
+        <!-- <view class="_div data-v-5810d7b6 cate_name">{{item.name}}</view> -->
+            <view class="_div data-v-5810d7b6 cricle">
+              <view class='title'>
+                暂无服务，敬请期待。
+ </view>
+            </view> 
+
+
+            </view>
+      </view>
+  </view>
+
+
+             
+
+
+
+
+
+
+
+
+
+
+  </view>
+</template>

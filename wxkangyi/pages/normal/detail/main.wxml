@@ -1,0 +1,38 @@
+<import src="/pages/normal/detail/index.vue.wxml" /><template is="49a3858f" data="{{ ...$root['0'], $root }}"/>
+    <view class="_div data-v-80626e3a tab">
+      <view class="_div data-v-80626e3a item {{[tabxp_active == 1 ? 'xqactive' : '']}}" bindtap="detshow" data-comkey="1">详情</view>
+      <view class="_div data-v-80626e3a item {{[tabxp_active == 2 ? 'xqactive' : '']}}" bindtap="detshow" data-id="{{goods_info.id}}" data-comkey="2">评论</view>
+    </view>
+    
+    <!-- 商品详情 -->
+    <view class="_div data-v-80626e3a main area" wx:if="{{tabxp_active == 1}}">
+      <rich-text class="_div data-v-80626e3a detail" nodes="{{goods_info.detail}}"></rich-text>
+    </view>
+    <!-- 评论 -->
+    <view class="_div data-v-80626e3a goodsreviewlistdv" wx:if="{{tabxp_active==2}}">
+      <!-- 虚假的评论 -->
+      <view class="comment">
+        <!-- 评论头部 -->
+        <view class="com-head">
+          <view class="com-he-t">评价 (<text>{{count}}</text>)</view>
+          <view class="com-he-f" bindtap="more" data-id="{{goods_info.id}}">></view>
+        </view>
+        <!-- 评论内容 -->
+        <view class="content" wx:for="{{comment}}">
+          <!-- 头像以及用户名 -->
+          <view class="con-head">
+            <view class="con-hd-img"><image src="{{item.avatar}}"></image></view>
+            <text bindtap="more" data-id="{{id}}">{{item.nickname}}</text>
+          </view>
+          <!-- 内容 -->
+          <view class="con-body">{{item.content}}</view>
+        </view>
+      </view>
+      <!-- 虚假的评论结束 -->
+    </view>
+
+
+
+    <view class="jia" wx:if="{{jia}}"  animation="{{animation}}">
+      <image src="/static/images/jia.png"></image>
+    </view>

@@ -1,0 +1,40 @@
+<!-- 评论内容 -->
+  <view class="comment">
+    <view class="goods_pic">
+      <image bindtap="get" src="{{goods.pic}}"></image>
+      
+      <view class="five">
+        <image bindtap="goo" data-number="1" src="{{good>0?sub:sup}}"></image>
+        <image bindtap="goo" data-number="2" src="{{good>1?sub:sup}}"></image>
+        <image bindtap="goo" data-number="3" src="{{good>2?sub:sup}}"></image>
+        <image bindtap="goo" data-number="4" src="{{good>3?sub:sup}}"></image>
+        <image bindtap="goo" data-number="5" src="{{good>4?sub:sup}}"></image>
+      </view>
+      <view class="gname">{{goods.name}}</view>
+    </view>
+        <view class="content" wx:for="{{comment}}">
+          <!-- 头像以及用户名 -->
+          <view class="con-head">
+            <view class="con-hd-img"><image src="{{item.avatar}}"></image></view>
+            <text class="more" bindtap="more" data-id="{{id}}">{{item.nickname}}</text>
+            
+            <view class="good">
+            <!-- 点赞 -->
+              <view bindtap="praise" data-id="{{item.id}}" data-tr="1" data-i="{{item.i}}" data-other="{{item.praise?1:0}}" class="heng">
+                <image src="{{item.praise>0?zanle:zan}}"></image>
+                <text class="numb"> {{item.good.length}}</text>
+              </view>
+            <!-- 踩 -->
+              <view bindtap="praise" data-id="{{item.id}}" data-tr="0" data-i="{{item.i}}" data-other="{{item.demote?1:0}}" class="heng">
+                <image src="{{item.demote?caile:cai}}"></image>
+                <text class="numb"> {{item.bad.length}}</text>
+              </view>
+            </view>
+          </view>
+          <!-- 内容 -->
+          <view class="con-body">{{item.content}}</view>
+          <view class="con-time">{{item.datetime}}</view>
+        </view>
+
+
+  </view>

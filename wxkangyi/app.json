@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index/main",
+    "pages/index/main/main",
+    "pages/shop/index/index",
+    "pages/shop/order/main",
+    "pages/normal/make/main",
+    "pages/normal/detail/main",
+    "pages/normal/cart/main",
+    "pages/setting/index/index",
+    "pages/driver/order/main",
+    "pages/shop/catelist/catelist",
+    "pages/topup/topup",
+    "pages/refund/refund",
+    "pages/music/music",
+    "pages/normal/comment/comment",
+    "pages/setting/index/in",
+    "pages/fault/fault"
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#495cbe",
+    "navigationBarTitleText": "康懿综合健康",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#495cbe",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index/main",
+        "iconPath": "static/images/home_icon/icon_1.png",
+        "selectedIconPath": "static/images/home_icon/icon_1_s.png"
+      },
+      {
+        "text": "康复中心",
+        "pagePath": "pages/shop/catelist/catelist",
+        "iconPath": "static/images/home_icon/icon_2.png",
+        "selectedIconPath": "static/images/home_icon/icon_2_s.png"
+      },
+      {
+        "text": "助眠音乐",
+        "pagePath": "pages/music/music",
+        "iconPath": "static/images/home_icon/yy.png",
+        "selectedIconPath": "static/images/home_icon/yy1.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/setting/index/index",
+        "iconPath": "static/images/home_icon/icon_3.png",
+        "selectedIconPath": "static/images/home_icon/icon_3_s.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap40.json"
+}

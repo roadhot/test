@@ -1,0 +1,65 @@
+
+.app {
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+.app .top-img {
+  width: 100%;
+}
+.app .top-img ._img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  margin: 50rpx 40% 50rpx;
+}
+.app .middle-nav {
+  width: 100%;
+}
+.app .line {
+  margin: 30rpx 40rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 40rpx;
+  padding: 0 20rpx;
+  display: flex;
+}
+.app .line ._label {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 600;
+  text-align: center;
+  width: 160rpx;
+}
+.app .line ._input {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+}
+.app .line .sms_btn {
+  width: 160rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.app .line .address_btn {
+  width: 160rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.botton-btn {
+  text-align: center;
+  width: 100%;
+}
+.botton-btn .btn {
+  margin: auto;
+  margin-top: 20rpx;
+  width: calc(100% - 80rpx);
+  background-color: #495cbe;
+  height: 90rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  line-height: 90rpx;
+  color: #fff;
+}

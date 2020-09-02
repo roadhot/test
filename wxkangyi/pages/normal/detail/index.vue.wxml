@@ -1,0 +1,47 @@
+<template name="49a3858f">
+  <view class="_div data-v-80626e3a app">
+    <view class="_div data-v-80626e3a header">
+      <view class="_div data-v-80626e3a wrap">
+        <image wx:if="{{info.pic}}" src="{{resurl+info.pic+'?x-oss-process=image/resize,m_fill,w_750,h_750'}}" alt class="_img data-v-80626e3a"></image>
+      </view>
+    </view>
+    <view class="_div data-v-80626e3a info area">
+      <view class="_div data-v-80626e3a name">{{info.name}}</view>
+      <view class="_div data-v-80626e3a price">￥{{info.price}}</view> <text class="_text data-v-80626e3a sales">销量:{{info.sales}} 库存:{{info.number}} </text>
+    </view>
+
+
+    <view class="_div data-v-80626e3a mask" wx:if="{{isshow_spec_box}}">
+      <view class="_div data-v-80626e3a specdv">
+        <view class="_div data-v-80626e3a specgoodsdv">
+          <view class="_div data-v-80626e3a selectdv"><label class="_span data-v-80626e3a itemdv {{[id == item.id ? 'nameactive' : '']}}" wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'5_2_'+index}}" data-comkey="{{$k}}" wx:for="{{info.spec_list}}" wx:for-index="index" wx:for-item="item">
+              {{item.spec_name}}
+            </label></view> <label class="_span data-v-80626e3a specnum">数量</label>
+          <view class="_div data-v-80626e3a numberop">
+            <view class="_div data-v-80626e3a changenumber" bindtap="handleProxy" data-eventid="{{'5_3'}}" data-comkey="{{$k}}">-</view> <text class="_text data-v-80626e3a">{{buynumber}}</text>
+            <view class="_div data-v-80626e3a changenumber" data-op="add" bindtap="handleProxy" data-eventid="{{'5_4'}}" data-comkey="{{$k}}">+</view>
+          </view>
+        </view>
+      </view> <button class="_button data-v-80626e3a queren" bindtap="handleProxy" data-eventid="{{'2_5'}}" data-comkey="{{$k}}">确定</button>
+      <image class="_img data-v-80626e3a closebtn" bindtap="handleProxy" src="/static/images/icon/close.png" alt data-eventid="{{'2_6'}}" data-comkey="{{$k}}"></image>
+      <view class="_div data-v-80626e3a goodsimgdv">
+        <image wx:if="{{info.pic}}" src="{{resurl+info.pic+'?x-oss-process=image/resize,m_fill,w_750,h_750'}}" alt class="_img data-v-80626e3a"></image>
+      </view>
+    </view>
+    <view class="_div data-v-80626e3a bottom">
+      <navigator class="_a data-v-80626e3a btn" url="{{'/pages/index/index/main'}}" open-type="reLaunch">
+        <image src="/static/images/home1.png" alt class="_img data-v-80626e3a"></image> <label class="_span data-v-80626e3a text">首页</label>
+      </navigator> <button class="_button data-v-80626e3a btn" open-type="contact">
+        <image src="/static/images/kfkf.png" alt class="_img data-v-80626e3a"></image> <label class="_span data-v-80626e3a text">客服</label>
+      </button>
+      <navigator class="_a data-v-80626e3a btn" url="{{'/pages/normal/cart/main'}}">
+        <image src="/static/images/gouwuche.png" alt class="_img data-v-80626e3a"></image> <label class="_span data-v-80626e3a text">购物车</label> <text class="_text data-v-80626e3a num">{{cartnumber}}</text> <text class="_text data-v-80626e3a text"></text>
+      </navigator>
+      <block wx:if="{{nickname==null||nickname=='佚名'}}"><button class="_button data-v-80626e3a btn_f" data-type="addshopcar" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleProxy" data-eventid="{{'3_7'}}" data-comkey="{{$k}}">加入购物车</button> <button class="_button data-v-80626e3a btn_r" data-type="buy" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleProxy" data-eventid="{{'3_8'}}" data-comkey="{{$k}}">立即购买</button></block>
+      <block wx:else>
+        <view class="_div data-v-80626e3a btn_f" bindtap="handleProxy" data-type="jia" data-eventid="{{'3_9'}}" data-comkey="{{$k}}">加入购物车</view>
+        <view class="_div data-v-80626e3a btn_r" bindtap="handleProxy" data-eventid="{{'3_10'}}" data-comkey="{{$k}}">立即购买</view>
+      </block>
+    </view>
+  </view>
+</template>

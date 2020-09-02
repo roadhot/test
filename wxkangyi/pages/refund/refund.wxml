@@ -1,0 +1,15 @@
+  <view class="_div data-v-92db1eda app">
+    <view class="_div data-v-92db1eda tab">
+      <view class="_div data-v-92db1eda item {{[tab_active == 1 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_0'}}" data-comkey="{{$k}}">待提现订单</view>
+    </view>
+    <view class="_div data-v-92db1eda void"></view>
+    <view class="_div data-v-92db1eda list">
+      <view class="_div data-v-92db1eda item" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-92db1eda line" style='font-size:30rpx;'>订单编号：{{item.orderon}}</view>
+        <view class="_div data-v-92db1eda line"  style='font-size:30rpx;'>下单时间：{{item.create_time}}</view>
+        <view class="_div data-v-92db1eda line"  style='font-size:30rpx;'>支付金额：￥{{item.balance}}</view>
+        
+        <button style='width:200rpx;height:50rpx;background:#abcdef;font-size:25rpx;float:right;margin-top:-50rpx;'          data-balance='{{item.balance}}' data-orderon='{{item.orderon}}' bindtap="refund">申请退款</button>
+      </view>
+    </view>
+  </view>

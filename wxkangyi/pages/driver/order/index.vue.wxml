@@ -1,0 +1,19 @@
+<template name="1e1d6e67">
+  <view class="_div data-v-92db1eda app">
+    <view class="_div data-v-92db1eda tab">
+      <view class="_div data-v-92db1eda item {{[tab_active == 1 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_0'}}" data-comkey="{{$k}}">正在租赁</view>
+      <view class="_div data-v-92db1eda item {{[tab_active == 2 ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'2_1'}}" data-comkey="{{$k}}">已经完成</view>
+    </view>
+    <view class="_div data-v-92db1eda void"></view>
+    <view class="_div data-v-92db1eda list">
+      <view class="_div data-v-92db1eda item" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-92db1eda line">订单编号：{{item.orderno}}</view>
+        <view class="_div data-v-92db1eda line">开始时间：{{item.start_datetime}}</view>
+        <view class="_div data-v-92db1eda line">支付金额：￥{{item.pay_price}}</view>
+        <view class="_div data-v-92db1eda line" wx:if="{{item.status==2}}">归还时间：{{item.end_datetime}}</view>
+        <view class="_div data-v-92db1eda line" wx:if="{{item.status==2}}">使用时长：{{item.use_time}}秒</view>
+        <view class="_div data-v-92db1eda line" wx:if="{{item.status==2}}">消费金额：￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,87 @@
+.comment{
+
+  background:#fff;
+  padding:30rpx;
+  font-size: 40rpx;
+}
+.content{
+  border-bottom: 4rpx solid #eee;
+  padding:18rpx 0;
+  font-size: 32rpx;
+}
+.con-head{
+  display: flex;
+  align-items: center;
+}
+.con-hd-img{
+  width:72rpx;
+}
+.con-hd-img image{
+  width:50rpx;
+  height:50rpx;
+  border-radius: 100%;
+}
+.con-body{
+  margin:30rpx 0 30rpx 72rpx;
+}
+.con-time{
+  margin-left: 500rpx;
+  color: #aaa;
+  height: 36rpx;
+  overflow: hidden;
+}
+.back{
+  font-size: 60rpx;
+  
+}
+
+.goods_pic{
+  display: flex;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  border: 1rpx solid #ccc;
+  align-items : flex-end;
+}
+.goods_pic image{
+  width:100rpx;
+  height:100rpx;
+
+}
+.five{
+  display: flex;
+  margin-left: 30rpx;
+}
+.five image{
+  width:40rpx;
+  height:40rpx;
+  margin-right: 15rpx;
+}
+.more{
+  width:380rpx;
+  overflow: hidden;
+}
+
+.good{
+  width:300rpx;
+  display: flex;
+}
+.good image{
+  width:40rpx;
+  height:40rpx;
+  margin-left:20rpx;
+}
+.heng{
+  display: flex;
+  align-items: center;
+  width:130rpx;
+}
+.numb{
+  color:#333;
+  margin-left:5rpx;
+}
+.gname{
+  position: relative;
+  left: -270rpx;
+top: -54rpx;
+color:#333;
+}

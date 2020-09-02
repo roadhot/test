@@ -1,0 +1,49 @@
+
+.slide.data-v-775f1028 {
+  position: relative;
+  width: 720rpx;
+  height: 340rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 20rpx auto;
+}
+.slide swiper.data-v-775f1028 {
+  width: 100%;
+  height: 100%;
+}
+.slide ._img.data-v-775f1028 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cate.data-v-775f1028 {
+  position: relative;
+  overflow: hidden;
+}
+.cate .item.data-v-775f1028 {
+  width: 25%;
+  display: block;
+  float: left;
+  height: 100rpx;
+  color: #FFF;
+}
+.cate .item .item_box.data-v-775f1028 {
+  position: relative;
+  width: 168rpx;
+  margin: auto;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.cate .item .item_box .bg.data-v-775f1028 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+}
+.cate .item .item_box .name.data-v-775f1028 {
+  position: absolute;
+  left: 20rpx;
+  top: 10rpx;
+  font-size: 28rpx;
+  z-index: 99;
+}

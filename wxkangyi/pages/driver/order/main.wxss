@@ -1,0 +1,83 @@
+
+.tab.data-v-92db1eda {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.tab .item.data-v-92db1eda {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 6rpx solid #fff;
+}
+.tab .active.data-v-92db1eda {
+  color: #495cbe;
+  border-bottom: 6rpx solid #495cbe;
+}
+.void.data-v-92db1eda {
+  width: 100%;
+  height: 80rpx;
+}
+.list .item.data-v-92db1eda {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFF;
+  border: 20rpx solid #FFF;
+  margin-top: 20rpx;
+}
+.list .item .line.data-v-92db1eda {
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+.reasonactive.data-v-92db1eda {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 600;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.reasonactive ._textarea.data-v-92db1eda {
+  height: 600rpx;
+  width: 560rpx;
+  background-color: white;
+  border-radius: 14rpx;
+  position: relative;
+  margin: auto;
+  margin-top: 300rpx;
+  z-index: 700;
+}
+.reasonactive .confirmcancel.data-v-92db1eda {
+  height: 70rpx;
+  width: 400rpx;
+  background-color: red;
+  color: white;
+  border-radius: 10rpx;
+  position: relative;
+  line-height: 70rpx;
+  margin: auto;
+  bottom: 200rpx;
+  z-index: 999;
+}
+.reasonactive .canceltuikuan.data-v-92db1eda {
+  height: 70rpx;
+  width: 400rpx;
+  color: red;
+  border-radius: 10rpx;
+  position: relative;
+  line-height: 70rpx;
+  margin: auto;
+  bottom: 200rpx;
+  z-index: 999;
+}

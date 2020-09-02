@@ -1,0 +1,36 @@
+<view bindtap="win" class="win">
+ 
+<view class="cont">
+  <view class="list" bindtap="click" wx:for="{{list}}" data-id="{{item.id}}">
+    <image src="{{item.title_img}}"></image>
+  </view>
+</view>
+
+
+<!-- 音乐的列表 -->
+<view class="mus_list" wx:if="{{block}}">
+  <view class="mus_ll" bindtap="danqu">单曲循环</view>
+  <view class="hr"></view>
+  <view class="mus_ll" bindtap="liebiao">列表循环</view>
+  <view class="hr"></view>
+  <!-- <view class="mus_ll" bindtap="bindTimeChange">定时结束</view> -->
+  <!-- <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+    <view class="picker mus_ll">
+      定时器
+    </view>
+  </picker> -->
+
+</view>
+<!-- 音乐的列表结束 -->
+<!-- 播放音乐 -->
+<view class="foot">
+  <view class="fimg1"><image class="tuxiang" src="{{dan.img_url}}"></image></view>
+  <view class="gname">{{dan.music_name}}</view>
+  
+  <view class="fimg2" wx:if="{{bian}}" bindtap="stop"><image class="bofang" src="/static/images/music/stop.png"></image></view>
+  <view class="fimg2" wx:else bindtap="play"><image class="bofang" src="/static/images/music/play.png"></image></view>
+  <view class="fimg3"><image catchtap="lie" class="liebiao" src="/static/images/music/list.png"></image></view>
+</view>
+</view>  
+
+

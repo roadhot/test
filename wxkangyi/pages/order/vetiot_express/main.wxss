@@ -1,0 +1,24 @@
+
+.list.data-v-4b199c47 {
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  background-color: white;
+}
+.list .item.data-v-4b199c47 {
+  width: 100%;
+  margin-top: 20rpx;
+}
+.list .item .time.data-v-4b199c47 {
+  font-size: 32rpx;
+  color: #333;
+}
+.list .item .status.data-v-4b199c47 {
+  font-size: 28rpx;
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  color: #999;
+}
+.list .item:last-child .status.data-v-4b199c47 {
+  border-bottom: none;
+}

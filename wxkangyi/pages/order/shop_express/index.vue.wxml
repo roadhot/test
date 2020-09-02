@@ -1,0 +1,10 @@
+<template name="35d371f0">
+  <view class="_div data-v-75d3f834 app">
+    <view class="_div data-v-75d3f834 list">
+      <view class="_div data-v-75d3f834 item" wx:key="index" key="{{index}}" wx:for="{{express_list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-75d3f834 time">{{item.time}}</view>
+        <view class="_div data-v-75d3f834 status">{{item.status}}</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,15 @@
+<view id='max'>
+<view></view>
+    <block  wx:for="{{list}}">
+      <!-- <view bindtap="isset" data-url="{{'/pages/shop/index/index?id='+item.id+'&name='+item.name}}"> -->
+      <navigator url="{{'/pages/shop/index/index?id='+item.id+'&name='+item.name}}">
+        <view style='width:49%;' class='goos_box'>
+          <view  class='img' style='border-bottom:1px solid #ddd;'>
+            <image src="https://kangy.oss-cn-beijing.aliyuncs.com/{{item.pic}}" class='img'></image>
+          </view>
+        </view>
+      </navigator>
+      <!-- </view> -->
+    </block>
+    
+</view>

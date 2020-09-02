@@ -1,0 +1,1 @@
+<import src="/pages/order/vetiot_express/index.vue.wxml" /><template is="19f8f3ca" data="{{ ...$root['0'], $root }}"/>

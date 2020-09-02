@@ -1,0 +1,37 @@
+<template name="738e6e5e">
+  <view class="_div data-v-06cb129c app">
+    <block wx:if="{{list.length==0}}">
+      <view class="_div data-v-06cb129c wrap">
+        <view class="_div data-v-06cb129c pic">
+          <image src="/static/images/shopingcar.jpg" alt class="_img data-v-06cb129c"></image>
+        </view>
+        <view class="_div data-v-06cb129c btn"><text class="_text data-v-06cb129c">购物车空空如也 快去逛逛吧</text>
+          <navigator url="/pages/shop/catelist/catelist" open-type="switchTab" class="_a data-v-06cb129c">去逛逛</navigator>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="_div data-v-06cb129c buylist">
+        <view class="_div data-v-06cb129c goods" wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-06cb129c info">
+            <view class="_div data-v-06cb129c pic">
+              <image src="{{resurl+item.pic+'?x-oss-process=image/resize,m_fill,w_240,h_240'}}" alt class="_img data-v-06cb129c"></image>
+            </view>
+            <view class="_div data-v-06cb129c name">{{item.name}}</view>
+            <view class="_div data-v-06cb129c price">￥{{item.price}}</view>
+            <view class="_div data-v-06cb129c numberop">
+              <view class="_div data-v-06cb129c changenumber" bindtap="handleProxy" data-eventid="{{'6_0_'+index}}" data-comkey="{{$k}}">-</view> <text class="_text data-v-06cb129c">{{item.buynumber}}</text>
+              <view class="_div data-v-06cb129c changenumber" data-op="add" bindtap="handleProxy" data-eventid="{{'6_1_'+index}}" data-comkey="{{$k}}">+</view>
+            </view>
+            <image src="/static/images/deld.png" alt class="_img data-v-06cb129c del" bindtap="handleProxy" data-eventid="{{'5_2_'+index}}" data-comkey="{{$k}}"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="_div data-v-06cb129c bottom">
+      <view class="_div data-v-06cb129c totalprice">总额:{{totalprice}}</view>
+      <view class="_a data-v-06cb129c button" wx:if="{{lists == 0}}" bindtap="nojump" data-eventid="{{'2_3'}}" data-comkey="{{$k}}">立即结算</view>
+      <view class="_a data-v-06cb129c button" wx:else bindtap="handleProxy" data-eventid="{{'2_3'}}" data-comkey="{{$k}}">立即结算</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,120 @@
+
+.tab.data-v-7672e530 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.tab .item.data-v-7672e530 {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 6rpx solid #fff;
+}
+.tab .active.data-v-7672e530 {
+  color: #ff9900;
+  border-bottom: 6rpx solid #ff9900;
+}
+.void.data-v-7672e530 {
+  width: 100%;
+  height: 80rpx;
+}
+.list.data-v-7672e530 {
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  padding-bottom: 0;
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+.list .top.data-v-7672e530 {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #eee;
+}
+.list .top .orderno.data-v-7672e530 {
+  font-size: 28rpx;
+}
+.list .top .status.data-v-7672e530 {
+  font-size: 28rpx;
+  color: #f01b2d;
+}
+.list .info.data-v-7672e530 {
+  width: 100%;
+  padding: 20rpx 0;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #eee;
+}
+.list .info .pic.data-v-7672e530 {
+  width: 200rpx;
+  height: 200rpx;
+}
+.list .info .left.data-v-7672e530 {
+  width: calc(100% - 220rpx);
+  height: 200rpx;
+}
+.list .info .left .name.data-v-7672e530 {
+  width: 100%;
+  text-align: right;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.list .info .left .price_num.data-v-7672e530 {
+  width: 100%;
+  text-align: right;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.list .info .left .price_num .price_.data-v-7672e530 {
+  color: #333;
+}
+.list .info .left .price_num .num.data-v-7672e530 {
+  color: #666;
+}
+.list .info .left .price.data-v-7672e530 {
+  width: 100%;
+  text-align: right;
+  color: #f01b2d;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.list .info .left .price ._span.data-v-7672e530 {
+  font-size: 40rpx;
+}
+.list .bottom.data-v-7672e530 {
+  padding-top: 10rpx;
+  height: 80rpx;
+  width: 100%;
+}
+.list .bottom .btu.data-v-7672e530 {
+  float: right;
+  margin-top: 8rpx;
+  margin-left: 20rpx;
+  width: 160rpx;
+  height: 44rpx;
+  border-radius: 30rpx;
+  border: 4rpx solid #f01b2d;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  color: #f01b2d;
+}
+.list .bottom .color.data-v-7672e530 {
+  color: #999;
+  border: 4rpx solid #999;
+}

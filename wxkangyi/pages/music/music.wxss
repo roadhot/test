@@ -1,0 +1,94 @@
+/* pages/music/music.wxss */
+page{
+  height:100%;
+}
+.win{
+  height:100%;
+}
+
+.img{
+  display: flex;
+  align-items: center;
+}
+
+.foot{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top:1px solid #ccc;
+  width:100%;
+  height:112rpx;
+  background:#fff;
+  box-shadow:0rpx 10rpx 20rpx 1rpx;
+}
+.tuxiang{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 100px;
+}
+.gname{
+  font-size: 30rpx;
+  color:#111;
+  width:50%;
+  margin-bottom: 44rpx;
+  margin-left: 20rpx;
+}
+.bofang{
+  width:60rpx;
+  height:60rpx;
+}
+.liebiao{
+  width:60rpx;
+  height:60rpx;
+}
+.fimg1{
+  width: 20%;
+  text-align: center;
+}
+.fimg2{
+  width: 15%;
+  text-align: center;
+}
+.fimg3{
+  width: 15%;
+  text-align: center;
+}
+
+.mus_list{
+  border:2rpx solid #ccc;
+  width:30%;
+  background:#fff;
+  position: fixed;
+  bottom: 123rpx;
+  right:10rpx;
+}
+.mus_ll{
+  height:86rpx;
+  color:#333;
+  font-size: 30rpx;
+  line-height: 86rpx;
+  text-align: center;
+}
+.hr{
+  width:100%;
+  height:4rpx;
+  background:#ccc;
+}
+.cont{
+  float:left;
+  margin-bottom: 150rpx;
+  width:100%;
+}
+.list{
+  width:100%;
+  height: 408rpx;
+  margin:20rpx 0 0 20rpx;
+  margin-left:0rpx;
+  float:left;
+}
+.list image{
+  width:100%;
+  height:100%;
+}

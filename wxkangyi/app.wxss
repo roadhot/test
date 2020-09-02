@@ -1,0 +1,40 @@
+
+page {
+  background: #eee;
+}
+._button,
+._button::after {
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  line-height: normal;
+  font-size: 32rpx;
+  border-radius: 0;
+}
+.detail image {
+  display: block;
+  width: 100%;
+}
+.kefu {
+  position: fixed;
+  right: -40rpx;
+  bottom: 20rpx;
+  width: 240rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  background-color: #025098;
+}
+.kefu ._img {
+  width: 68rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+.kefu .text {
+  font-size: 28rpx;
+  color: #fff;
+  margin-left: 20rpx;
+}

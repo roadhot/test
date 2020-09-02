@@ -1,0 +1,28 @@
+<template name="56f64fac">
+  <view class="_div data-v-3ffb5000 app">
+    <view class="_div data-v-3ffb5000 line" bindtap="handleProxy" data-eventid="{{'1_0'}}" data-comkey="{{$k}}">
+      <view class="_div data-v-3ffb5000 right">
+        <view wx:if="{{address==null}}" class="_div data-v-3ffb5000 noaddress"><label class="_span data-v-3ffb5000">您尚未设置收件地址\n点击设置</label></view>
+        <view wx:else class="_div data-v-3ffb5000 address">
+          <view class="_div data-v-3ffb5000 span" style="color: #000;"><label space="ensp" class="_span data-v-3ffb5000">{{address.addressee}} {{address.tel}}</label></view>
+          <view class="_div data-v-3ffb5000 span"><label space="ensp" class="_span data-v-3ffb5000">{{address.province}} {{address.city}} {{address.county}} {{address.addressdetail}}</label></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-3ffb5000 title">订单详情</view>
+    <view class="_div data-v-3ffb5000 list">
+      <view class="_div data-v-3ffb5000 goods" wx:key="index" key="{{index}}" wx:for="{{order.goods_list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-3ffb5000 info">
+          <view class="_div data-v-3ffb5000 pic">
+            <image src="{{resurl+item.pic+'?x-oss-process=image/resize,m_fill,w_240,h_240'}}" alt class="_img data-v-3ffb5000"></image>
+          </view>
+          <view class="_div data-v-3ffb5000 name" style>{{item.name}}</view>
+          <view class="_div data-v-3ffb5000 price">￥{{item.price}}</view>
+          <view class="_div data-v-3ffb5000 buynumber">x{{item.buynumber}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-3ffb5000 remarkdv"><textarea value="{{remark}}" bindinput="handleProxy" name id cols="30" rows="10" placeholder="请输入备注信息" data-eventid="{{'2_1'}}" data-comkey="{{$k}}" class="_textarea data-v-3ffb5000" /></view> <view wx:if="{{pay_type == 1}}" style="padding-bottom:10px;padding-left: 15px;background-color: #fff;" class="_div data-v-3ffb5000">积分抵扣:{{order.consume_price}} 元</view> <view class="_div data-v-3ffb5000 bottom"><view class="_div data-v-3ffb5000 buy_btn" bindtap="handleProxy" data-eventid="{{'2_2'}}" data-comkey="{{$k}}">立即付款</view> <view class="_div data-v-3ffb5000 real_price">应付：
+                <label class="_span data-v-3ffb5000">{{order.totalprice}}</label><label wx:if="{{order.exp_price==0}}" class="_span data-v-3ffb5000">(包邮)</label><label wx:else class="_span data-v-3ffb5000">(运费{{order.exp_price}})</label></view></view> <picker bindchange="handleProxy" value="{{coupon_index}}" range-key="text" range="{{coupon_list}}" data-eventid="{{'1_3'}}" data-comkey="{{$k}}" class="_picker data-v-3ffb5000"><view wx:if="{{coupon}}" class="_view data-v-3ffb5000 coupon">
+                优惠券:{{coupon['text']}}
+            </view></picker></view></template>
